@@ -2,7 +2,7 @@
 if(!session_id()) session_start();
 require_once 'Proses.php';
 
-$proses = new Proses;
+// $proses = new Proses;
 
 if(isset($_SESSION['id'])) {
     if($_SESSION['level'] == "Admin") {

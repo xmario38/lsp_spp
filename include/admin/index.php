@@ -11,7 +11,7 @@ if(!isset($_SESSION['id'])) {
 $id = $_SESSION['id'];
 
 $data = $admin->getDataPetugas($id);
-$row = mysql_fetch_assoc($data);
+$row = mysqli_fetch_assoc($data);
 ?>
 
 <!DOCTYPE html>
