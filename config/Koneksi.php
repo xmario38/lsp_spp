@@ -9,7 +9,7 @@ class Koneksi {
     public function __construct() {
         $this->konek = mysqli_connect($this->host, $this->user, $this->pass, $this->db_name);
 
-        if($this->konek) {
+        if ($this->konek) {
             echo "Koneksi sukses";
         } else {
             echo "Koneksi gagal";
@@ -17,4 +17,4 @@ class Koneksi {
     }
 }
 
-$konek = new Koneksi;
+// $konek = new Koneksi;
