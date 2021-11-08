@@ -13,7 +13,13 @@ if(isset($_GET['p'])) {
     } elseif($_GET['p'] == 'ubah-spp') {
         require_once 'ubah-spp.php'; 
     } elseif($_GET['p'] == 'hapus-spp') {
-        // hapus data spp
+        if($admin->hapusDataSPP($_GET['id'])) {
+            header('Location: ?p=spp');
+            $_SESSION['pesan'] = "Data SPP berhasil dihapus";
+        } else {
+            header('Location: ?p=spp');
+            $_SESSION['pesan'] = "Data SPP gagal dihapus";
+        }
     } else {
         echo '<script>alert("Halaman tidak ada!")</script>';
     }

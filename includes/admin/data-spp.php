@@ -28,7 +28,7 @@ if(isset($_SESSION['pesan'])) {
                 <td><?= $no++; ?></td>
                 <td><?= $dt_spp['tahun']; ?></td>
                 <td><?= $dt_spp['nominal']; ?></td>
-                <td><a href="?p=ubah-spp">Ubah</a>|<a href="?p=hapus-spp">Hapus</a></td>
+                <td><a href="?p=ubah-spp&id=<?= $dt_spp['id_spp']; ?>">Ubah</a>|<a href="?p=hapus-spp&id=<?= $dt_spp['id_spp']; ?>" onclick="return confirm('Yakin data ini akan dihapus?')">Hapus</a></td>
             </tr>
 
         <?php

@@ -24,4 +24,29 @@ class Admin extends Koneksi {
             return false;
         }
     }
+
+    public function getDataSPPbyId($id) {
+        $stmt = mysqli_query($this->konek, "SELECT * FROM tb_spp WHERE id_spp = '".$id."'");
+
+        return $stmt;
+    }
+
+    public function ubahDataSPP($tahun, $nominal, $id) {
+        $stmt = mysqli_query($this->konek, "UPDATE tb_spp SET tahun = '".$tahun."', nominal = '".$nominal."' WHERE id_spp = ".$id);
+
+        if($stmt) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function hapusDataSPP($id) {
+        $stmt = mysqli_query($this->konek, "DELETE FROM tb_spp WHERE id_spp = ".$id);
+
+        if($stmt) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

@@ -14,7 +14,7 @@ if(isset($_SESSION['id'])) {
 }
 
 if (isset($_POST['masuk'])) {
-    $username = $proses->konek->real_escape_string($_POST['usernme']);
+    $username = $proses->konek->real_escape_string($_POST['username']);
     $password = $proses->konek->real_escape_string(sha1($_POST['password']));
 
     $masuk = $proses->loginPetugas($username, $password);
