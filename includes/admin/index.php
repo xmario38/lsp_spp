@@ -3,7 +3,9 @@ require_once 'header.php';
 
 if(isset($_GET['p'])) {
     if($_GET['p'] == 'siswa') {
-        require_once 'data-siswa.php'; // belum dibuat
+        require_once 'data-siswa.php';
+    } elseif($_GET['p'] == 'tambah-siswa') {
+        require_once 'tambah-siswa.php';
     } elseif($_GET['p'] == 'petugas') {
         require_once 'data-petugas.php'; // belum dibuat
     } elseif($_GET['p'] == 'spp') {

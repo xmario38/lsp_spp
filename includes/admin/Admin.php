@@ -49,4 +49,40 @@ class Admin extends Koneksi {
             return false;
         }
     }
+
+    public function getDataSiswa() {
+        $stmt = mysqli_query($this->konek, "SELECT * FROM tb_siswa INNER JOIN tb_spp ON tb_siswa.id_spp = tb_spp.id_spp ORDER BY NISN ASC");
+
+        return $stmt;
+    }
+
+    public function cekDataSiswa($nisn, $nis) {
+        $stmt = mysql1_query($this->konek, "SELECT * FROM tb_siswa WHERE nisn = '$nisn' OR nis = '$nis'");
+
+        if($stmt) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function tambahDataSiswa($nisn, $nis, $nama, $kelas, $tahun) {
+        $stmt = mysqli_query($this->konek, "INSERT INTO tb_siswa VALUES ('$nisn', '$nis', '$nama', '$kelas', '$tahun')");
+
+        if($stmt) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function tambahDataPembayaran($nisn, $bulan, $id_spp) {
+        $stmt = mysqli_query($this->konek, "INSERT INTO tb_pembayaran (nisn, bulan_dibayar, id_spp) VALUES ('$nisn', '$bulan', '$id_spp')");
+
+        if($stmt) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
