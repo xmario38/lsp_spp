@@ -6,6 +6,17 @@ if(isset($_GET['p'])) {
         require_once 'data-siswa.php';
     } elseif($_GET['p'] == 'tambah-siswa') {
         require_once 'tambah-siswa.php';
+    } elseif($_GET['p'] == 'ubah-siswa') {
+        require_once 'ubah-siswa.php';
+    } elseif($_GET['p'] == 'hapus-siswa') {
+        if($admin->hapusDataSiswa($_GET['nisn'])) {
+            $admin->hapusDataPembayaran($_GET['nisn']);
+            header('Location: ?p=siswa');
+            $_SESSION['pesan'] = "Data Siswa berhasil dihapus";
+        } else {
+            header('Location: ?p=siswa');
+            $_SESSION['pesan'] = "Data Siswa gagal dihapus";
+        }
     } elseif($_GET['p'] == 'petugas') {
         require_once 'data-petugas.php'; // belum dibuat
     } elseif($_GET['p'] == 'spp') {

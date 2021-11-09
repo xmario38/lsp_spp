@@ -34,7 +34,7 @@ if(isset($_SESSION['pesan'])) {
                 <td><?= $dt_siswa['nama_lengkap']; ?></td>
                 <td><?= $dt_siswa['kelas']; ?></td>
                 <td><?= $dt_siswa['tahun']; ?></td>
-                <td><a href="?p=ubah-siswa&id=<?= $dt_siswa['id_siswa']; ?>">Ubah</a>|<a href="?p=hapus-siswa&id=<?= $dt_siswa['id_siswa']; ?>" onclick="return confirm('Yakin data ini akan dihapus?')">Hapus</a></td>
+                <td><a href="?p=ubah-siswa&nisn=<?= $dt_siswa['nisn']; ?>">Ubah</a>|<a href="?p=hapus-siswa&nisn=<?= $dt_siswa['nisn']; ?>" onclick="return confirm('Yakin data ini akan dihapus?')">Hapus</a></td>
             </tr>
 
         <?php

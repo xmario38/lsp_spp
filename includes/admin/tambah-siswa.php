@@ -31,11 +31,11 @@ if(isset($_POST['submit'])) {
 <h2>Tambah Data SPP</h2>
 <form method="post">
     <label for="nisn">NISN</label><br>
-    <input type="text" name="nisn" id="nisn"><br>
+    <input type="text" name="nisn" id="nisn" required><br>
     <label for="nis">NIS</label><br>
-    <input type="text" name="nis" id="nis"><br>
+    <input type="text" name="nis" id="nis" required><br>
     <label for="nama">Nama Lengkap</label><br>
-    <input type="text" name="nama" id="nama"><br>
+    <input type="text" name="nama" id="nama" required><br>
     <label for="kelas">Kelas</label><br>
     <select name="kelas">
         <option value="X">X</option>
