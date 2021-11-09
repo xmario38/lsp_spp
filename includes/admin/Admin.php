@@ -77,7 +77,7 @@ class Admin extends Koneksi {
     }
 
     public function tambahDataPembayaran($nisn, $bulan, $id_spp) {
-        $stmt = mysqli_query($this->konek, "INSERT INTO tb_pembayaran (nisn, bulan_dibayar, id_spp) VALUES ('$nisn', '$bulan', '$id_spp'");
+        $stmt = mysqli_query($this->konek, "INSERT INTO tb_pembayaran (nisn, bulan_dibayar, id_spp) VALUES ('$nisn', '$bulan', '$id_spp')");
 
         if($stmt) {
             return true;
