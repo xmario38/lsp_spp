@@ -2,9 +2,9 @@
 if(isset($_POST['submit'])) {
     $nisn = $_POST['nisn'];
     $nis = $_POST['nis'];
-    $nisn = $_POST['nama'];
-    $nisn = $_POST['kelas'];
-    $nisn = $_POST['id_spp'];
+    $nama = $_POST['nama'];
+    $kelas = $_POST['kelas'];
+    $id_spp = $_POST['id_spp'];
 
     $cek = $admin->cekDataSiswa($nisn, $nis);
 

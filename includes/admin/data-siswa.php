@@ -11,6 +11,7 @@ if(isset($_SESSION['pesan'])) {
 ?>
 <table border="1">
     <tr>
+        <th>No</th>
         <th>NISN</th>
         <th>NIS</th>
         <th>Nama Lengkap</th>
